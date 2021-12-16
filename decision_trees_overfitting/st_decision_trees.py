@@ -24,6 +24,8 @@ def f(x):
 random_state = st.slider('Random seed', min_value=1, max_value=42, value=17)
 depth = st.slider('Decision tree depth', min_value=2, max_value=10, value=3)
 
+st.markdown("""---""")
+
 # Generate data
 rng = np.random.RandomState(random_state)
 X = np.sort(5 * rng.rand(80, 1), axis=0)
@@ -44,10 +46,9 @@ y_hat = reg.predict(X_test)
 
 # Plot
 fig, ax = plt.subplots(figsize=(10, 5))
-# plt.figure(figsize=(10, 5))
 
 plt.plot(X_test, y_hat, label=f'depth={depth}', color='g', linewidth=2)
-plt.scatter(X, y, label='data', edgecolor="black", c="darkorange")#, label="data"
+plt.scatter(X, y, label='data', edgecolor="black", c="darkorange")
 
 plt.xticks(size=12)
 plt.xlabel("X", size=12)
@@ -58,6 +59,7 @@ plt.grid(b=1)
 
 st.pyplot(fig)
 
+# Show this code
 show_me = st.checkbox('Show my code')
 if show_me:
     st.code("""
