@@ -11,9 +11,19 @@ import numpy as np
 import streamlit as st
 
 
-st.set_page_config(page_title='Decision trees overfitting demo', page_icon='../icons/head.ico',
+st.set_page_config(page_title='Decision trees overfitting demo', page_icon='../images/head.ico',
                    layout='centered', initial_sidebar_state='collapsed')
 
+padding = 0
+st.markdown(f""" <style>
+    .reportview-container .main .block-container{{
+        padding-top: {padding}rem;
+        padding-right: {padding}rem;
+        padding-left: {padding}rem;
+        padding-bottom: {padding}rem;
+    }} </style> """, unsafe_allow_html=True)
+    
+st.image('../images/head.png')
 st.subheader('Decision trees overfitting demo')
 
 # Set function
