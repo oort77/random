@@ -11,7 +11,7 @@ import numpy as np
 import streamlit as st
 
 
-st.set_page_config(page_title='Decision trees overfitting demo', page_icon='./icons/head.ico',
+st.set_page_config(page_title='Decision trees overfitting demo', page_icon='../icons/head.ico',
                    layout='centered', initial_sidebar_state='collapsed')
 
 st.subheader('Decision trees overfitting demo')
