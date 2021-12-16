@@ -23,7 +23,7 @@ st.markdown(f""" <style>
         padding-bottom: {padding}rem;
     }} </style> """, unsafe_allow_html=True)
     
-st.image('../images/head.png')
+st.image('../images/header.png')
 st.subheader('Decision trees overfitting demo')
 
 # Set function
